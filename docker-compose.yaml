@@ -1,0 +1,10 @@
+version: "3"
+services:
+  app:  #環境変数
+    build: .  # カレントフォルダーを「.」を書く。これによりDockerfileを使ってイメージが作成される。
+    ports:
+      - "5001:5000"
+    container_name: app
+    volumes:
+      - ./app:/usr/src/app
+    command: flask run --host=0.0.0.0 # flask run --hos=0.0.0.0コマンドを実行する。

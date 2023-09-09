@@ -1,9 +1,0 @@
-services:
-  web: #　環境変数
-    build: . # カレントフォルダーを「.」を書く。これによりDockerfileを使ってイメー字が作成される。
-    environment:
-      FLASK_ENV: development # 環境変数（Flaskでプログラムの即時反映をするため、developmentを設定)
-    ports:
-      - "5000:5000" #ポート番号 Flaskのデフォルトのポート番号
-    volumes:
-      - ./src:/usr/src/app # バインドマウントの設定
